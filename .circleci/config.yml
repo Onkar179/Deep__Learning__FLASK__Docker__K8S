@@ -8,11 +8,9 @@ orbs:
 workflows:
     example-workflow:
       jobs:
-        - docker/publish:
-            remote-docker-dlc: true 
+        - docker/publish: 
             attach-at: /app 
-            path: Deep Learning 
-            use-remote-docker: true 
+            path: Deep Learning  
             docker-password: DOCKER_PASS 
             docker-username: DOCKER_USERNAME 
             tag: v12 
