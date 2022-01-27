@@ -5,18 +5,15 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
 
-jobs:
-  example-job:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - docker/build:
-          tag: v12 
-          image: onkar17/mlops 
-          docker-context: flask 
-
 workflows:
-  example-workflow:
-    jobs:
-      - example-job
+    example-workflow:
+      jobs:
+        - docker/publish:
+            remote-docker-dlc: true 
+            attach-at: /app 
+            path: Deep Learning 
+            use-remote-docker: true 
+            docker-password: DOCKER_PASS 
+            docker-username: DOCKER_USERNAME 
+            tag: v12 
+            image: onkar17/mlops 
