@@ -9,7 +9,7 @@ workflows:
     example-workflow:
       jobs:
         - docker/publish:
-            path: Deep Learning/. 
+            path: Deep Learning
             tag: ml 
             image: onkar17/dlimg 
             docker-password: DOCKER_PASS 
