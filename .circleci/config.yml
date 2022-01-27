@@ -9,7 +9,6 @@ workflows:
     example-workflow:
       jobs:
         - docker/publish: 
-            attach-at: /app 
             path: Deep Learning  
             docker-password: DOCKER_PASS 
             docker-username: DOCKER_USERNAME 
