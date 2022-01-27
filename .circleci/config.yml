@@ -5,11 +5,18 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
 
+jobs:
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - docker/build:
+          tag: v12 
+          image: onkar17/mlops 
+          docker-context: flask 
+
 workflows:
-    example-workflow:
-      jobs:
-        - docker/publish:
-            tag: ml 
-            image: onkar17/dlimg 
-            docker-password: DOCKER_PASS 
-            docker-username: DOCKER_USERNAME 
+  example-workflow:
+    jobs:
+      - example-job
