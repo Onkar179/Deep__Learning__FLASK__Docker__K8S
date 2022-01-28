@@ -2,7 +2,7 @@ FROM  onkar17/keras-tensorflow
 
 RUN   pip3 install flask  &&  mkdir templates
 
-COPY  dl_model.h5  /  &&  app.py  /  &&  templates  /templates 
+COPY  . / 
 
 EXPOSE  1111
 
