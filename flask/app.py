@@ -30,6 +30,4 @@ def result():
         else:
             return render_template("second.html")
 
- app.run(port=1111, host='0.0.0.0')
-
-
+app.run(port=1111, host='0.0.0.0')
