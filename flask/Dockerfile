@@ -1,6 +1,6 @@
 FROM  onkar17/keras-tensorflow
 
-RUN   pip3 install flask  &&  mkdir templates
+RUN   pip3 install flask
 
 COPY  . / 
 
