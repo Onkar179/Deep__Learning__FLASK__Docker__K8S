@@ -20,12 +20,15 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
-    - name: Build and push
-      id: docker_build
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: onkar17/mlops:v12
+    - name: Build 
+      run: docker build -f flask/Dockerfile -t mlops:v12 .
+        
+    - name: Tag
+      run: docker tag mlops:v12 onkar17/mlops:v12
+      
+    - name: Push
+      run: docker push onkar17/mlops:v12
+      
+      
 
     
