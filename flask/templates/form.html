@@ -6,18 +6,14 @@
 * {
   box-sizing: border-box;
 }
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+.someclass {
+    width: 100px;
 }
 
-label {
-  padding: 12px 12px 12px 0;
+label{
+  padding: 12px 12px 1px 80px;
   display: inline-block;
+
 }
 
 input[type=submit] {
@@ -27,7 +23,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
+  float: right; 
 }
 
 input[type=submit]:hover {
@@ -37,19 +33,26 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: pink;
-  padding: 20px;
+  padding: 30px;
+  width: 900px;
+  border: 5px solid black;
+  margin:auto;
 }
 
 .col-25 {
   float: left;
   width: 25%;
-  margin-top: 6px;
+  margin-top: 10px;
+  font-weight: bold;
+  
 }
 
 .col-75 {
   float: left;
   width: 75%;
-  margin-top: 6px;
+  margin-top: 20px;
+  padding-left: 300px;
+  
 }
 
 /* Clear floats after the columns */
@@ -70,7 +73,7 @@ input[type=submit]:hover {
 </head>
 <body style="background-color: aqua">
 <center>
-<h1 style="font-style: bold ; font-size: 40px;color: purple";>Online Dibetics Checker</h1>
+<h1 style="font-style: bold ; font-size: 40px;color: purple";>Online Dibetes Checker</h1>
 </center>
 <div class="container">
   <form action="/result" method="GET">
@@ -79,7 +82,7 @@ input[type=submit]:hover {
         <label for="fname">Pregenencies</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="x1">
+        <input type="number" id="fname" class="someclass" name="x1" required>
       </div>
     </div>
     <div class="row">
@@ -87,7 +90,7 @@ input[type=submit]:hover {
         <label for="lname">Glucose</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="x2">
+        <input type="number" min="0" max="200" id="lname" class="someclass" name="x2" required>
       </div>
     </div>
     <div class="row">
@@ -95,7 +98,7 @@ input[type=submit]:hover {
         <label for="country">Blood Pressure</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x3">
+      	<input type="number" min="0" max="180" class="someclass" id="lname" name="x3" required>
       </div>
     </div>
      <div class="row">
@@ -103,7 +106,7 @@ input[type=submit]:hover {
         <label for="country">Skin Thickness</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x4">
+      	<input type="number" id="lname" min="0" max="100" class="someclass" name="x4" required>
       </div>
     </div>
      <div class="row">
@@ -111,7 +114,7 @@ input[type=submit]:hover {
         <label for="country">Insulin</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x5">
+      	<input type="number" step="any" min="0" max="850" id="lname" class="someclass" name="x5" required>
       </div>
     </div>
      <div class="row">
@@ -119,7 +122,7 @@ input[type=submit]:hover {
         <label for="country">BMI</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x6">
+      	<input type="number" step="any" min="0" max="67.1"  id="lname" class="someclass" name="x6" required>
       </div>
     </div>
      <div class="row">
@@ -127,7 +130,7 @@ input[type=submit]:hover {
         <label for="country">Dibetic Pedigree</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x7">
+      	<input type="number" step="any" min="0.08" max="2.42" step="any" id="lname" class="someclass" name="x7" required>
       </div>
     </div>
      <div class="row">
@@ -135,18 +138,19 @@ input[type=submit]:hover {
         <label for="country">Age</label>
       </div>
       <div class="col-75">
-      	<input type="text" id="lname" name="x8">
+      	<input type="number" min="21" max="80" id="lname" class="someclass" name="x8" required>
       </div>
     </div>
     
    <br />
    <br />
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit"  value="Submit">
     </div>
   </form>
 </div>
 
 </body>
 </html>
+
 
